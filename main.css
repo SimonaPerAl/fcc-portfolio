@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+*{
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;	
+}
+
+body{
+	margin: 0px;
+	justify-content: center;
+	background-color: #ededed;		
+	width: calc(100% - 20px);
+}
+
+/*-------HEADER--------*/
+#page-title{
+	width: 200px;
+	font-size: 22px;
+	margin: 0px 8px 0px 50px;
+	justify-content: center;
+	display: inline;
+	margin: auto 0px ;
+}
+
+header{
+	width: 100%;
+	
+	position: fixed;
+	z-index: 1;
+}
+
+#nav-bar{
+	background-color: #adadad;	
+	width: 100%;	
+	padding: 8px;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 60px;
+}
+.nav-list{
+	display: flex;		
+	flex-direction: row;
+	justify-content:flex-end;
+	margin: auto 0px;
+	width: auto;	
+	padding-right:  100px;
+	text-transform: uppercase;
+
+}
+
+li{
+	list-style: none;
+	padding-right: 16px;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+/*-------MAIN--------*/
+main{
+ 	display: grid;
+	width: 1100px;
+	height: auto;
+	position: relative;
+	justify-content: center; 
+	margin: auto;
+
+}
+
+section{
+	position: relative;
+	top: 60px;
+}
+
+
+
+#welcome-section{
+	position: relative;
+	top:  0;
+	height: 100vh;
+	width: 100%;
+}
+#greeting{
+	position: relative;
+	top: 50%;
+	left: 25%;
+}
+
+#pic{
+	width: 100%;
+	height: 100%;
+}
+
+/*-------projects--------*/
+
+#project-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 223px 223px;
+	justify-content: center;
+	justify-items: center;
+	grid-gap: 24px;
+}
+
+.project-img, .summary{
+	width: 400px;
+	height: 223px;
+}
+
+.summary:after{
+	display: block;
+	content: attr(data-text);
+	position: relative;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	word-wrap: break-word;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.6);
+	color: #ffffff;
+	opacity: 0;
+	transition: 0.5s;
+	width: 100%;
+}
+
+.summary:hover:after{
+	opacity: 1;
+	top: -200px;
+
+}
+
+
+
+/*-------FOOTER--------*/
+
+footer{
+	background:  #727272;
+	width: 100%;
+	color: #ffffff;
+	text-align: center;
+	height: 50px;
+	padding: 10px;
+	position: relative;
+	bottom: -100px;
+	font-size:15px;
+}
+
+@media screen and (max-width: 900px) {
+	body{
+		width: 100%;
+	}
+}
